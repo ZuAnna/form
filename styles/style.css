@@ -29,7 +29,9 @@ body {
 .form {
   overflow: hidden;
   color: #ffffff;
-  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .form__in {
   max-width: 550px;

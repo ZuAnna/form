@@ -29,9 +29,7 @@ $mainFont: 'Roboto Condensed', sans-serif;
 .form{
    overflow: hidden;
 color: #ffffff;
-margin: auto;
-
-
+display: flex;
 
 &__in{
 max-width: 550px;
