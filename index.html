@@ -20,8 +20,8 @@
     <title>myForm</title>
   </head>
   <body>
-
-   <div class="form">
+<div class="wrap">
+<div class="form">
       <form
         class="form__in"
         action="#"
@@ -29,34 +29,37 @@
         enctype="multipart/form-data"
       >
       <h1 class="form__title">Заполните личные данные</h1>
-        <div class="form__in-name">
+        <div class="form__in-items">
           <label for="name" class="form__in-label">Имя</label>
           <input type="text" class="form__in-input" id="name" />
         </div>
-        <div class="form__in-surname">
+        <div class="form__in-items">
            <label for="surname" class="form__in-label">Фамилия</label>
            <input type="text" class="form__in-input" id="surname">
         </div>
-        <div class="form__in-bd">
+        <div class="form__in-items">
            <label for="bd" class="form__in-label">Дата рождения</label>
            <input type="date" class="form__in-input" id="bd">
         </div>
-         <div class="form__in-tel">
+         <div class="form__in-items">
           <label for="tel" class="form__in-label">Телефон</label>
           <input type="tel" class="form__in-input" id="tel"/>
         </div>
 
-        <div class="form__in-pass">
+        <div class="form__in-items">
           <label for="pass" class="form__in-label">Пароль</label>
           <input type="password" class="form__in-input" id="pass" />
         </div>
-        <div class="form__in-buttons">
+        <div class="form__in-items form__in-buttons">
            <button class="form__in-button signin">Регистрация</button>
            <button type="reset" class="form__in-button reset">Сброс</button>
         </div>
 
       </form>
     </div>
+
+</div>
+
 
 
 
