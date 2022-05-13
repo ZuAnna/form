@@ -25,21 +25,21 @@
       <form
         class="form__in"
         action="#"
-        method="post"
+        method="get"
         enctype="multipart/form-data"
       >
       <h1 class="form__title">Заполните личные данные</h1>
         <div class="form__in-items">
           <label for="name" class="form__in-label">Имя</label>
-          <input type="text" class="form__in-input" id="name" />
+          <input type="text" class="form__in-input" id="name" placeholder="Анастасия"/>
         </div>
         <div class="form__in-items">
            <label for="surname" class="form__in-label">Фамилия</label>
-           <input type="text" class="form__in-input" id="surname">
+           <input type="text" class="form__in-input" id="surname" placeholder="Иванова">
         </div>
         <div class="form__in-items">
            <label for="bd" class="form__in-label">Дата рождения</label>
-           <input type="date" class="form__in-input" id="bd">
+           <input type="date" class="form__in-input" id="bd"/>
         </div>
          <div class="form__in-items">
           <label for="tel" class="form__in-label">Телефон</label>
@@ -47,11 +47,11 @@
         </div>
 
         <div class="form__in-items">
-          <label for="pass" class="form__in-label">Пароль</label>
+          <label for="pass" class="form__in-label" minlength="6">Пароль</label>
           <input type="password" class="form__in-input" id="pass" />
         </div>
         <div class="form__in-items form__in-buttons">
-           <button class="form__in-button signin">Регистрация</button>
+           <button class="form__in-button signin" type="submit">Регистрация</button>
            <button type="reset" class="form__in-button reset">Сброс</button>
         </div>
 

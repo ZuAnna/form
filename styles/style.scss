@@ -14,24 +14,26 @@ $mainFont: 'Roboto Condensed', sans-serif;
  }
  html {
    width: 100%;
-   height: 100%;
+   height: 100vh;
    font-size: 22px;
  }
  body{
    max-width: 100%;
+   position: relative;
    font-family: $mainFont;
    background-color: #1a1a1d;
-   height: 100%;
+   height: 100vh;
 
 }
 
 
 .form{
-   overflow: hidden;
+
 color: #ffffff;
 display: flex;
 
 &__in{
+   overflow: hidden;
 max-width: 550px;
    max-height: 700px;
 margin: auto;
@@ -42,29 +44,52 @@ display: block;
    padding: 30px 25px;
    border: 2px solid #950740;
    border-radius: 7px;
+box-shadow: none;
+transition: all .5s ease-in;
+
 margin-top: 10%;
 cursor: pointer;
+&:hover{
+   transition: all .8s ease-in ;
+   box-shadow: 0px 0px 8px 1px #c3073f;
+}
 &-label{
 
    line-height: 35px;
    text-transform: uppercase;
    cursor: pointer;
-   transition: all .5s ease-in .3s;
+   transition: all .7s  .1s ease-out;
 
 
    &:hover{
-      text-shadow:4px 4px 8px #950740;
-      
+      text-shadow:4px 4px 5px #950740,
+      4px 4px 5px #950740;
+
    }
 }
 &-input{
    display: block;
    width: 100%;
-   height: 30px;
+   height: 40px;
+   text-align: center;
    background-color: #4e4e50;
    border:none ;
    border-radius: 7px;
+   color: #fff;
+   font-family: $mainFont;
+   font-weight: 200;
+   font-size: 20px;
+   text-transform: uppercase;
+   letter-spacing: 2px;
    cursor: pointer;
+   outline: 1px solid transparent;
+   transition: all .4s ease-in-out;
+   &:hover{
+     outline: 1px solid #c3073f;
+   }
+   &:focus{
+      outline: 1px solid #c3073f;
+   }
 }
 &-items{
    margin-bottom: 15px;
@@ -72,15 +97,24 @@ cursor: pointer;
 &-buttons{
    margin-top: 10px;
    text-align: center;
+   position: relative;
 }
 &-button{
+   position: absolute;
    min-width: 150px;
-   padding: 7px 7px;
+   padding: 8px 7px;
+   border: none;
    border-radius: 7px;
    letter-spacing: 1px;
    text-transform: uppercase;
    color: #ffffff;
+   outline: 1px solid transparent;
    cursor: pointer;
+   transition: all .4s .2s linear;
+   &:hover{
+      outline: 1px solid #fff;
+   }
+
 }
 }
 &__title{
@@ -98,11 +132,14 @@ margin-bottom: 20px;
 }
 .signin{
    background-color: #c3073f;
-   border: none;
-   padding: 8px 7px;
+   margin-right: 10px;
+   right: 50%;
+
+
 }
 .reset{
    background-color: #4e4e50;
-   border: 1px  solid #fff ;
+
+
 
 }
