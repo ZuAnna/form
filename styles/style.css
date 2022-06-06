@@ -100,6 +100,9 @@ body {
 .form__in-input:focus {
   outline: 1px solid #c3073f;
 }
+.form__in-input.error {
+  border: 2px solid red;
+}
 .form__in-items {
   margin-bottom: 15px;
 }

@@ -90,6 +90,9 @@ cursor: pointer;
    &:focus{
       outline: 1px solid #c3073f;
    }
+   &.error{
+      border: 2px solid red;
+   }
 }
 &-items{
    margin-bottom: 15px;
@@ -140,6 +143,5 @@ margin-bottom: 20px;
 .reset{
    background-color: #4e4e50;
 
-
-
 }
+
