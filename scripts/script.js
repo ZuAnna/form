@@ -1,9 +1,9 @@
-var element = document.getElementById("tel");
-var maskOptions = {
-  mask: "+{7}(000)000-00-00",
-  lazy: false,
-};
-var mask = IMask(element, maskOptions);
+// var element = document.getElementById("tel");
+// var maskOptions = {
+//   mask: "+{7}(000)000-00-00",
+//   lazy: false,
+// };
+// var mask = IMask(element, maskOptions);
 
 // let reg = /[А-ЯЁ][а-яё]/;
 // let regEmail =
@@ -12,25 +12,37 @@ var mask = IMask(element, maskOptions);
 
 let form = document.querySelector('.form__in');
 let formInputs = document.querySelectorAll('.form__in-input')
-let surname = document.querySelector("#surname");
-let nameinput = document.querySelector("#name");
-let pass = document.querySelector("#pass");
-let span = document.querySelector(".span");
+let surname = document.querySelector('#surname');
+let nameinput = document.querySelector('#name');
+let pass = document.querySelector('#pass');
+let span = document.querySelector('.span');
+let tel = document.querySelector('#tel');
 
 
-function validPass(pass, span){
-  if (pass.length <= 4){
-    span.innerHTML = 'Пароль слишком мал, введите больше 4 символов'
+
+function validPass(passVal,pass){
+  if (passVal.length <= 4){
+    span.innerHTML = '*Пароль должен быть > 4 символов';
+    pass.classList.add('error');
+    return false
+  } else {
+    pass.classList.remove('error');
+    span.innerHTML= '';
+
   }
-}
 
+}
+ function validTel(telVal){
+  let re = /^[0-9\s]*$/;
+  return re.test(String(telVal));
+ }
 
 
 form.onsubmit = function(){
-  let surnameVal = surname.value,
-      nameVal = nameinput.value,
-      passVal = pass.value,
+  let  passVal = pass.value,
+      telVal = tel.value,
       emtyInputs = Array.from(formInputs).filter(input => input.value === '');
+
 
     formInputs.forEach(function(input){
       if (input.value=== ""){
@@ -45,5 +57,16 @@ form.onsubmit = function(){
       return false;
 
     }
+    validPass(passVal,pass);
+    
+   if (!validTel(telVal)){
+     document.querySelector('#tel').classList.add('error');
+     return false
+   } else if(telVal.length < 11) {
+    document.querySelector('#tel').classList.add('error');
+       return false
 
+   } else {
+    document.querySelector('#tel').classList.remove('error')
+   }
 }
